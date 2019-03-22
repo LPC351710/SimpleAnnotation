@@ -1,4 +1,5 @@
 apply plugin: 'java-library'
+apply plugin: 'com.novoda.bintray-release'
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -6,3 +7,13 @@ dependencies {
 
 sourceCompatibility = "7"
 targetCompatibility = "7"
+
+publish {
+    userOrg = 'lpc351710'//bintray.com用户名
+    groupId = 'com.ppm'//jcenter上的路径
+    artifactId = 'simpleAnnotation'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'a simple annotation library'//描述，不重要
+    website = 'https://github.com/LPC351710'//网站，最好有，不重要
+}
+
